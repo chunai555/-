@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微光入梦 | 音乐作品站</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="opening" aria-label="搴忕珷钀ょ伀鍏ュ彛">
+      <div class="opening-veil" aria-hidden="true"></div>
+      <div class="opening-landscape" aria-hidden="true"></div>
+      <div class="opening-particles" aria-hidden="true"></div>
+      <button class="firefly-trigger" type="button" aria-label="轻触萤火，开启前尘">
+        <span class="firefly-aura"></span>
+        <span class="firefly-wings"></span>
+        <span class="firefly-core"></span>
+      </button>
+      <p class="opening-prompt">轻触萤火，开启前尘</p>
+    </div>
+
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#home">寰厜鍏ユⅵ</a>
+      <nav class="nav-links" aria-label="椤甸潰瀵艰埅">
+        <a href="#story">鏁呬簨</a>
+        <a href="#listen">鑱嗗惉</a>
+        <a href="#visual">褰卞儚</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="寰厜鍏ユⅵ鍏ㄥ睆娴锋姤">
+        <video class="hero-video" src="视频.mp4" preload="auto" autoplay muted loop playsinline aria-label="夜色花田中的动态影像"></video>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow js-mask-line"><span>New Ambient Single</span></p>
+          <h1 class="hero-title js-mask-line"><span>寰厜鍏ユⅵ</span></h1>
+          <p class="hero-copy js-mask-line"><span>在夜色与花影之间，收集一束尚未熄灭的声音。</span></p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-audio-toggle>
+              <span class="action-icon" aria-hidden="true">▶</span>
+              <span data-audio-label>璇曞惉鐗囧埢</span>
+            </button>
+            <a class="ghost-action" href="#story">杩涘叆浣滃搧</a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#story" aria-label="鍚戜笅娴忚">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="intro-section" id="story">
+        <canvas class="galaxy-bg" aria-hidden="true"></canvas>
+        <div class="section-display" aria-hidden="true">STORY</div>
+        <div class="section-kicker">The Story</div>
+        <div class="intro-grid">
+          <div>
+            <h2>一首写给深夜花田的歌</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              銆婂井鍏夊叆姊︺€嬩互娓╂煍鐨勫鑹蹭负搴曪紝鎶婁汉澹颁箣澶栫殑鍛煎惛銆佽繙澶勭殑椋庛€佹墜蹇冮噷鐨勫厜锛岄兘鏀捐繘鍚屼竴娈电紦鎱㈠睍寮€鐨勬棆寰嬮噷銆?            </p>
+            <p>
+              瀹冧笉鎬ョ潃鎶佃揪楂樻疆锛岃€屾槸鍍忓厜鏉熺┛杩囧皹鍩冿紝鎱㈡參鐓т寒涓€灏忕墖瀹夐潤鐨勫湴鏂广€?            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="listen-section" id="listen">
+        <canvas class="galaxy-bg" aria-hidden="true"></canvas>
+        <div class="fate-bg" aria-hidden="true">
+          <span class="moon-orb"></span>
+          <span class="waterline"></span>
+          <span class="peach-grove"></span>
+          <span class="rising-bubbles"></span>
+        </div>
+        <div class="section-display" aria-hidden="true">LISTEN</div>
+        <div class="track-panel reunion-video-card">
+          <div class="track-art media-glow-card">
+            <div class="media-glow-inner">
+              <video class="track-video" src="《遇萤》.mp4" poster="遇萤-视频封面.png" preload="metadata" controls playsinline aria-label="遇萤音乐视频"></video>
+            </div>
+          </div>
+          <div class="track-info">
+            <p class="section-kicker">Featured Video</p>
+            <h2>閬囪悿</h2>
+            <p>完整视频重新回到第三屏，以独立卡片承接前世今生的高潮段落。点击播放，让流萤、月色与旋律一起进入重逢篇。</p>
+            <div class="track-meta">
+              <span>Music Video</span>
+              <span>Playable</span>
+              <span>Reunion Version</span>
+            </div>
+          </div>
+        </div>
+        <div class="dual-player" data-version="reunion" data-active-version="none">
+          <div class="orb-shell" aria-label="双声播放器">
+            <div class="orb-stage">
+              <button class="fate-orb" type="button" data-orb-control aria-label="播放或暂停">
+                <span class="orb-progress" aria-hidden="true"></span>
+                <span class="orb-core" aria-hidden="true"></span>
+                <span class="orb-label">重逢</span>
+              </button>
+            </div>
+            <p class="orb-hint" data-stage-hint>点击光球播放 / 暂停，按住拖动调节进度与音量。</p>
+          </div>
+          <div class="lyric-panel" aria-live="polite">
+            <p class="section-kicker">Dual Voice Player</p>
+            <h3 data-version-title>重逢版 · 双声部融合</h3>
+            <p class="lyric-line">
+              <span>穿过</span><span>前尘</span><span>深海</span><span>与</span><span>月色</span><span>，</span><span>终于</span><span>在</span><span>桃林</span><span>相逢</span>
+            </p>
+            <p class="version-copy" data-version-copy>原版完整混音的视觉呈现，金银两色流萤同时点亮，承接全站最饱满的情绪。</p>
+            <div class="version-switcher" aria-label="鐗堟湰鍒囨崲">
+              <button type="button" data-version-button="past">前世版</button>
+              <button type="button" data-version-button="present">今生版</button>
+              <button class="is-active" type="button" data-version-button="reunion">閲嶉€㈢増</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="highlights-section destiny-section" aria-label="瀹垮懡閲嶉€簰鍔ㄥ尯">
+        <canvas class="reunion-firefly-canvas" aria-hidden="true"></canvas>
+        <div class="section-display section-display-inline" aria-hidden="true">REUNION</div>
+        <div class="reunion-intro">
+          <p class="section-kicker">Firefly Chorus</p>
+          <h2>瀹垮懡鐩搁€紝娴佽悿鍗囪捣</h2>
+          <p>划过夜空生成新的流萤，点击任意位置绽放萤光花海。累计点亮 100 只流萤后，重逢结局会在桃林下显现。</p>
+          <div class="firefly-counter" aria-live="polite">
+            <span data-firefly-count>0</span>
+            <small>/ 100 fireflies</small>
+          </div>
+        </div>
+        <div class="scroll-painting" aria-label="鍙屼笘瀵圭収鐢诲嵎">
+          <div class="reunion-ending" aria-hidden="true">
+            <span class="silhouette silhouette-left"></span>
+            <span class="silhouette silhouette-right"></span>
+            <strong>重逢剧情</strong>
+            <p>重逢结局已解锁</p>
+          </div>
+          <button class="painting-card" type="button" data-painting="桃林拾萤 / 桃林重逢">
+            <span>鍓嶄笘</span>
+            <strong>妗冩灄鎷捐悿</strong>
+            <em>今生 · 桃林重逢</em>
+          </button>
+          <button class="painting-card" type="button" data-painting="鏍戜笅璁告効 / 骞惰偐鐪嬭悿">
+            <span>鍓嶄笘</span>
+            <strong>鏍戜笅璁告効</strong>
+            <em>浠婄敓 路 骞惰偐鐪嬭悿</em>
+          </button>
+          <button class="painting-card" type="button" data-painting="娣辨捣绛夊緟 / 鏈堜笅褰掓潵">
+            <span>鍓嶄笘</span>
+            <strong>娣辨捣绛夊緟</strong>
+            <em>浠婄敓 路 鏈堜笅褰掓潵</em>
+          </button>
+        </div>
+        <dialog class="painting-dialog" aria-label="鐢诲嵎璇︽儏">
+          <button class="dialog-close" type="button" data-dialog-close aria-label="关闭">×</button>
+          <div class="dialog-art" aria-hidden="true"></div>
+          <div>
+            <p class="section-kicker">Memory Scroll</p>
+            <h3 data-dialog-title>桃林拾萤 / 桃林重逢</h3>
+            <p>专属 BGM 变奏待解锁。当前会继续使用主旋律，让这一组前世今生的画面停留在同一束光里。</p>
+          </div>
+        </dialog>
+      </section>
+
+      <section class="visual-section" id="visual">
+        <video class="visual-video" src="视频.mp4" preload="auto" autoplay muted loop playsinline></video>
+        <div class="visual-overlay" aria-hidden="true"></div>
+        <div class="visual-content">
+          <div class="section-display" aria-hidden="true">VISUAL</div>
+          <p class="section-kicker">Visual Extension</p>
+          <h2>光仍在慢慢移动</h2>
+          <p>影像作为歌曲的延展，让画面保持低声、流动、接近梦境边缘。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>寰厜鍏ユⅵ 路 2026</p>
+      <a href="#home">鍥炲埌娴锋姤</a>
+    </footer>
+
+    <audio id="song" src="6月17日.mp3" preload="metadata"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>纯爱 | 音乐作品站</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="opening" aria-label="序章萤火入口">
+      <div class="opening-veil" aria-hidden="true"></div>
+      <div class="opening-landscape" aria-hidden="true"></div>
+      <div class="opening-particles" aria-hidden="true"></div>
+      <button class="firefly-trigger" type="button" aria-label="轻触萤火，开启前尘">
+        <span class="firefly-aura"></span>
+        <span class="firefly-wings"></span>
+        <span class="firefly-core"></span>
+      </button>
+      <p class="opening-prompt">轻触萤火，开启前尘</p>
+    </div>
+
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#home">纯爱</a>
+      <nav class="nav-links" aria-label="欢迎来到我的世界">
+        <a href="#home">欢迎来到我的世界</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="微光入梦全屏海报">
+        <video class="hero-video" src="视频.mp4" preload="auto" autoplay muted loop playsinline aria-label="夜色花田中的动态影像"></video>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow js-mask-line"><span>Past Life and Present Life</span></p>
+          <h1 class="hero-title js-mask-line"><span>前生今世</span></h1>
+          <p class="hero-copy js-mask-line"><span>在萤火微光里，撞见属于自己的前世今生</span></p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-audio-toggle>
+              <span class="action-icon" aria-hidden="true">▶</span>
+              <span data-audio-label>停下看看</span>
+            </button>
+            <a class="ghost-action" href="#story">开启前尘</a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#story" aria-label="向下浏览">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="intro-section" id="story">
+        <canvas class="galaxy-bg" aria-hidden="true"></canvas>
+        <div class="section-display" aria-hidden="true">PAST LIFE</div>
+        <div class="section-kicker">The Story</div>
+        <div class="intro-grid">
+          <div>
+            <h2>前世篇・桃花遇</h2>
+          </div>
+          <div class="intro-copy">
+            <p>对应歌曲主歌段落，讲述人间初遇、一诺千年的前世故事。桃花、细雨、灯火与流萤一起，把旋律带回最初相遇的那一晚。</p>
+            <p>鼠标划过桃林会牵动雨丝和花瓣；点击微光、长按老桃树、唤醒乐器，都能收集前世回忆碎片。</p>
+          </div>
+        </div>
+        <div class="past-life-system" data-past-life>
+          <article class="past-scene peach-meet-scene" aria-label="桃林初见区">
+            <span class="scene-flow-border" aria-hidden="true"></span>
+            <div class="rain-field" aria-hidden="true"></div>
+            <div class="petal-field" aria-hidden="true"></div>
+            <div class="paper-lamp">
+              <span class="lamp-glow"></span>
+              <button class="lamp-firefly" type="button" data-lamp-firefly aria-label="点亮油纸灯边的流萤"></button>
+            </div>
+            <div class="past-scene-copy">
+              <p class="section-kicker">桃林初见</p>
+              <h3>青青柳色新，绵绵细雨落</h3>
+              <p>桃林小径微雨初歇，油纸灯照着一只停在灯边的流萤。</p>
+            </div>
+            <div class="story-card" data-story-card hidden>
+              <strong>桃林初见</strong>
+              <p>那年上元，他化凡人形，于桃林下拾得一只受伤的流萤。</p>
+            </div>
+          </article>
+
+          <article class="past-scene vow-scene" aria-label="树下一诺区">
+            <div class="old-peach-tree" data-vow-tree role="button" tabindex="0" aria-label="长按桃树树干 3 秒解锁前世剧情插画">
+              <span class="tree-crown"></span>
+              <span class="tree-trunk"></span>
+            </div>
+            <button class="vow-firefly" type="button" data-vow-firefly aria-label="触发树下一诺念白"></button>
+            <div class="silhouette-pair" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="falling-petals" data-falling-petals aria-hidden="true"></div>
+            <div class="past-scene-copy">
+              <p class="section-kicker">树下一诺</p>
+              <h3>只因一次相遇，种下了执念</h3>
+              <p data-vow-line>点击剪影旁的流萤，听见那句被藏进千年的约定。</p>
+            </div>
+            <div class="hold-meter" data-hold-meter aria-hidden="true"><span></span></div>
+          </article>
+
+          <article class="past-scene music-workshop" aria-label="前世乐坊区">
+            <div class="past-scene-copy">
+              <p class="section-kicker">前世乐坊</p>
+              <h3>拆开主歌里的民乐层次</h3>
+              <p data-instrument-status>点击乐器，突出对应伴奏声部。四件全部点亮后解锁前世纯民乐版。</p>
+            </div>
+            <div class="instrument-grid" aria-label="古风乐器">
+              <button type="button" data-instrument="竹笛"><span>竹笛</span><em>笛音突出</em></button>
+              <button type="button" data-instrument="古筝"><span>古筝</span><em>纯筝片段</em></button>
+              <button type="button" data-instrument="琵琶"><span>琵琶</span><em>拨弦入拍</em></button>
+              <button type="button" data-instrument="铃铛"><span>铃铛</span><em>微光点拍</em></button>
+            </div>
+            <button class="folk-version-toggle" type="button" data-folk-toggle disabled>前世纯民乐版未解锁</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="present-section" id="present" data-present-life aria-label="今生篇・深海寂">
+        <div class="sea-transition" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="deep-sea-bg" aria-hidden="true">
+          <span class="dragon-palace-silhouette"></span>
+          <span class="seaweed seaweed-left"></span>
+          <span class="seaweed seaweed-right"></span>
+          <span class="cold-fireflies"></span>
+          <span class="bubble-field"></span>
+        </div>
+        <div class="section-display" aria-hidden="true">DEEP SEA</div>
+        <div class="present-heading">
+          <p class="section-kicker">Present Life</p>
+          <h2>今生篇・深海寂</h2>
+          <p>副歌与桥段落入深海，讲述龙宫独守、千年等待的执念。桃粉褪去后，只剩冷银流萤照见归期。</p>
+        </div>
+
+        <div class="present-grid">
+          <article class="sea-card palace-scene" aria-label="龙宫独守区">
+            <span class="scene-flow-border" aria-hidden="true"></span>
+            <div class="palace-hall" aria-hidden="true">
+              <span class="palace-pillars"></span>
+              <span class="dragon-throne"></span>
+              <span class="dragon-shadow"></span>
+            </div>
+            <button class="palace-firefly" type="button" data-palace-firefly aria-label="点亮王座扶手处的萤火"></button>
+            <div class="water-ripple-layer" data-ripple-layer aria-hidden="true"></div>
+            <div class="sea-card-copy">
+              <p class="section-kicker">龙宫独守</p>
+              <h3>遇萤，照见前尘影</h3>
+              <p>空旷大殿只余冷光，王座上的龙形人影守着四海潮声。</p>
+            </div>
+            <div class="sea-monologue" data-sea-monologue hidden>
+              <strong>内心独白</strong>
+              <p>千年光阴，四海寂寂，不过等一个归期。</p>
+            </div>
+          </article>
+
+          <article class="sea-card timeline-scene" aria-label="千年时间轴">
+            <div class="sea-card-copy">
+              <p class="section-kicker">千年时间轴</p>
+              <h3>七枚冷银流萤，串起漫长等待</h3>
+              <p data-timeline-copy>点击任意节点，听见一段被深海放慢的副歌回声。</p>
+            </div>
+            <div class="timeline-list" aria-label="千年等待节点">
+              <button type="button" data-timeline-node data-year="第一年" data-copy="他在龙宫收起桃枝，仍记得人间灯火。" data-start="58">第一年</button>
+              <button type="button" data-timeline-node data-year="第一百年" data-copy="海潮涨落百次，他把诺言刻进玉阶。" data-start="64">第一百年</button>
+              <button type="button" data-timeline-node data-year="第三百年" data-copy="龙宫长夜无声，冷银流萤替他守门。" data-start="70">第三百年</button>
+              <button type="button" data-timeline-node data-year="第五百年" data-copy="桃林再无春风，他在龙宫点了五百盏流萤灯。" data-start="76">第五百年</button>
+              <button type="button" data-timeline-node data-year="第七百年" data-copy="旧梦沉入海底，只有歌声还会回潮。" data-start="82">第七百年</button>
+              <button type="button" data-timeline-node data-year="第九百年" data-copy="他听见前尘微响，像有人隔海唤名。" data-start="88">第九百年</button>
+              <button type="button" data-timeline-node data-year="第一千年" data-copy="流萤终于向上飞去，照出重逢之前的月色。" data-start="94">第一千年</button>
+            </div>
+          </article>
+
+          <article class="sea-card lyric-scroll-scene" aria-label="深海歌词手札">
+            <div class="sea-card-copy">
+              <p class="section-kicker">深海歌词手札</p>
+              <h3>刻在深海玉简上的桥段</h3>
+              <p data-lyric-note>滚动到这里，歌词会逐行浮现；点击任意一句查看剧情注解。</p>
+            </div>
+            <div class="jade-lyrics" aria-label="深海歌词">
+              <button type="button" data-lyric-line data-note="前尘不是梦，是深海里仍未熄灭的一束光。" data-start="102">遇萤，照见前尘影</button>
+              <button type="button" data-lyric-line data-note="他守着龙宫，也守着那一夜桃林初见。" data-start="108">千年潮声，替我问归期</button>
+              <button type="button" data-lyric-line data-note="冷银色流萤向上升起，预示重逢将近。" data-start="114">若你仍记得，便随月色来</button>
+              <button type="button" data-lyric-line data-note="情绪升调，所有等待都推向下一屏的相逢。" data-start="120">一念穿海，终向人间开</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="listen-section" id="listen">
+        <canvas class="galaxy-bg" aria-hidden="true"></canvas>
+        <div class="fate-bg" aria-hidden="true">
+          <span class="moon-orb"></span>
+          <span class="waterline"></span>
+          <span class="peach-grove"></span>
+          <span class="rising-bubbles"></span>
+        </div>
+        <div class="section-display" aria-hidden="true">LISTEN</div>
+        <div class="track-panel reunion-video-card">
+          <div class="track-art border-glow-card video-glow-card">
+            <span class="flow-light" aria-hidden="true"></span>
+            <span class="edge-light" aria-hidden="true"></span>
+            <div class="border-glow-inner media-glow-inner">
+              <video class="track-video" src="《遇萤》.mp4" poster="遇萤-视频封面.png" preload="metadata" controls playsinline aria-label="遇萤音乐视频"></video>
+            </div>
+          </div>
+          <div class="track-info">
+            <p class="section-kicker">Featured Video</p>
+            <h2>遇萤</h2>
+            <p>伴随着一只萤火的指引，穿过桃花盛放的前世人间，潜入孤寂千年的深海，最终在漫天流萤里迎来宿命的重逢。</p>
+            <div class="track-meta">
+              <span>Music Video</span>
+              <span>Playable</span>
+              <span>Reunion Version</span>
+            </div>
+          </div>
+        </div>
+        <div class="dual-player" data-version="reunion" data-active-version="none">
+          <div class="orb-shell" aria-label="双声播放器">
+            <div class="orb-stage">
+              <button class="fate-orb" type="button" data-orb-control aria-label="播放或暂停">
+                <span class="orb-progress" aria-hidden="true"></span>
+                <span class="orb-core" aria-hidden="true"></span>
+                <span class="orb-label">重逢</span>
+              </button>
+            </div>
+            <p class="orb-hint" data-stage-hint>点击光球播放 / 暂停，按住拖动调节进度与音量。</p>
+          </div>
+          <div class="lyric-panel" aria-live="polite">
+            <p class="section-kicker">Dual Voice Player</p>
+            <h3 data-version-title>重逢版 · 双声部融合</h3>
+            <p class="lyric-line">
+              <span>穿过</span><span>前尘</span><span>深海</span><span>与</span><span>月色</span><span>，</span><span>终于</span><span>在</span><span>桃林</span><span>相逢</span>
+            </p>
+            <p class="version-copy" data-version-copy>原版完整混音的视觉呈现，金银两色流萤同时点亮，承接全站最饱满的情绪。</p>
+            <div class="version-switcher" aria-label="版本切换">
+              <button type="button" data-version-button="past">前世版</button>
+              <button type="button" data-version-button="present">今生版</button>
+              <button class="is-active" type="button" data-version-button="reunion">重逢版</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="highlights-section destiny-section" aria-label="宿命重逢互动区">
+        <canvas class="reunion-firefly-canvas" aria-hidden="true"></canvas>
+        <div class="section-display section-display-inline" aria-hidden="true">REUNION</div>
+        <div class="reunion-intro">
+          <p class="section-kicker">Firefly Chorus</p>
+          <h2>宿命相逢，流萤升起</h2>
+          <p>划过夜空生成新的流萤，点击任意位置绽放萤光花海。累计点亮 520 只流萤后，隐藏的重逢结局动画会在桃林下显现。</p>
+          <div class="firefly-counter" aria-live="polite">
+            <span data-firefly-count>0</span>
+            <small>/ 520 fireflies</small>
+          </div>
+        </div>
+        <div class="scroll-painting" aria-label="双世对照画卷">
+          <button class="reunion-ending" type="button" aria-hidden="true" aria-disabled="true" data-requires-unlock="true" data-painting="今生·天地徜徉" data-video-src="天地徜徉/三生三世.mp4" data-dialog-copy="两人以初遇的桃林为起点，携手遍历天地光景：春日在桃溪泛舟拾花，夏夜于山巅并肩观星，秋时踏过枫林漫山红叶，冬夜围炉共赏落雪。">
+            <span class="ending-lock">520 只流萤解锁</span>
+            <span class="ending-aura"></span>
+            <span class="silhouette silhouette-left"></span>
+            <span class="silhouette silhouette-right"></span>
+            <strong>重逢结局动画</strong>
+            <p>隐藏结局等待解锁</p>
+          </button>
+          <button class="painting-card media-painting-card" type="button" data-painting="月下拾萤 / 今生·彼岸重逢" data-video-src="月下拾萤/月下拾萤-web.mp4" data-video-poster="月下拾萤/封面替换.jpg" data-dialog-copy="他站在彼岸这头，看见转世的她站在对岸，两人遥遥相望，无数前世记忆如流萤般在河面穿梭，两世的时间线在此刻终于交汇。">
+            <img class="painting-card-media" src="月下拾萤/封面替换.jpg" alt="" aria-hidden="true" />
+            <span>前世</span>
+            <strong>月下拾萤</strong>
+            <em>今生·彼岸重逢</em>
+          </button>
+          <button class="painting-card media-painting-card" type="button" data-painting="时空破碎 / 今生·生死相随" data-video-src="生死相随/生死相随.mp4" data-video-poster="生死相随/生死相随封面替换.jpg" data-dialog-copy="无数的回忆喷涌而出，铺成通往彼岸的光路。他们踏着破碎的时空奔赴约定，哪怕神魂俱损，也要兑现那句 “一诺千年”。">
+            <img class="painting-card-media" src="生死相随/生死相随封面替换.jpg" alt="" aria-hidden="true" />
+            <span>前世</span>
+            <strong>时空破碎</strong>
+            <em>今生·生死相随</em>
+          </button>
+          <button class="painting-card media-painting-card" type="button" data-painting="穿越千年 / 今生·逆转时间" data-video-src="《逆转时间》/《逆转时间》.mp4" data-video-poster="《逆转时间》/逆转时间封面替换.jpg" data-dialog-copy="他们带着所有轮回的记忆往回走，最终落回的相遇。">
+            <img class="painting-card-media" src="《逆转时间》/逆转时间封面替换.jpg" alt="" aria-hidden="true" />
+            <span>前世</span>
+            <strong>穿越千年</strong>
+            <em>今生·逆转时间</em>
+          </button>
+        </div>
+        <dialog class="painting-dialog" aria-label="画卷详情">
+          <button class="dialog-close" type="button" data-dialog-close aria-label="关闭">×</button>
+          <div class="dialog-art" aria-hidden="true">
+            <video class="dialog-video" data-dialog-video controls playsinline preload="auto" hidden></video>
+          </div>
+          <div>
+            <p class="section-kicker">Memory Scroll</p>
+            <h3 data-dialog-title>月下拾萤 / 彼岸重逢</h3>
+            <p data-dialog-copy>他站在彼岸这头，看见转世的她站在对岸，两人遥遥相望，无数前世记忆如流萤般在河面穿梭，两世的时间线在此刻终于交汇。</p>
+          </div>
+        </dialog>
+      </section>
+
+      <section class="visual-section epilogue-section" id="visual" data-epilogue aria-label="尾声・千年诺">
+        <div class="epilogue-sky" aria-hidden="true"></div>
+        <div class="section-display" aria-hidden="true">EPILOGUE</div>
+        <div class="epilogue-heading">
+          <p class="section-kicker">Finale</p>
+          <h2>尾声・千年诺</h2>
+          <p>尾奏归于深墨夜色，流萤慢慢散开。故事在这里放轻呼吸，把最后一束光交给每个抵达的人。</p>
+        </div>
+
+        <div class="epilogue-grid">
+          <article class="firefly-wall" aria-label="萤火留声墙">
+            <div class="wall-head">
+              <div>
+                <p class="section-kicker">萤火留声墙</p>
+                <h3>把心愿留在这片夜空</h3>
+              </div>
+              <button class="wish-open" type="button" data-wish-open>写下心愿</button>
+            </div>
+            <div class="message-sky" data-message-sky aria-live="polite"></div>
+            <div class="message-popover" data-message-popover hidden></div>
+            <form class="wish-form" data-wish-form hidden>
+              <label>
+                <span>心愿或寄语</span>
+                <textarea data-wish-input maxlength="80" minlength="2" placeholder="写下想留给流萤的话"></textarea>
+              </label>
+              <div class="wish-actions">
+                <small data-wish-status>留言会通过共享接口保存；接口未连接时将暂存在当前浏览器。</small>
+                <button type="submit">生成流萤</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="creation-book" aria-label="创作手记馆">
+            <div class="book-tabs" role="tablist" aria-label="创作手记卷册">
+              <button class="is-active" type="button" data-book-tab="music">乐篇</button>
+              <button type="button" data-book-tab="visual">画篇</button>
+              <button type="button" data-book-tab="story">念篇</button>
+            </div>
+            <div class="book-page" data-book-page>
+              <button class="page-edge page-prev" type="button" data-page-prev aria-label="上一页"></button>
+              <div class="book-copy">
+                <p class="section-kicker" data-book-kicker>乐篇</p>
+                <h3 data-book-title>旋律从一束微光开始</h3>
+                <p data-book-body>歌曲以主歌的细雨和副歌的深海回声相互照应，编曲从民乐纹理慢慢推向重逢时的开阔声场。</p>
+              </div>
+              <button class="page-edge page-next" type="button" data-page-next aria-label="下一页"></button>
+            </div>
+          </article>
+        </div>
+
+        <div class="afterlife-easter" data-afterlife>
+          <p>下一世，还会遇见吗</p>
+          <button class="afterlife-firefly" type="button" data-afterlife-firefly aria-label="点亮来生彩蛋"></button>
+          <strong data-afterlife-line hidden>轮回不止，相逢有期</strong>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>微光入梦 · 2026</p>
+      <a href="#home">回到海报</a>
+    </footer>
+
+    <aside class="memory-atlas" data-memory-atlas aria-label="前世碎片图鉴">
+      <button class="atlas-toggle" type="button" data-atlas-toggle aria-expanded="false" aria-label="打开前世碎片图鉴">明</button>
+      <div class="atlas-panel" data-atlas-panel hidden>
+        <strong>前世碎片图鉴</strong>
+        <p data-atlas-empty>尚未收集前世回忆。</p>
+        <ul data-atlas-list></ul>
+      </div>
+    </aside>
+
+    <audio id="song" src="6月17日.mp3" preload="metadata"></audio>
+    <audio id="encounter-song" src="遇萤声音.mp3" preload="metadata"></audio>
+    <audio id="vow-voice" src="配音.mp3" preload="metadata"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
