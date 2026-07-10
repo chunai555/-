@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>心愿便利贴 | 浪漫主题音乐网站</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="meteorCanvas" aria-hidden="true"></canvas>
+    <audio id="mainAudio" src="心愿便利贴.mp3" preload="metadata"></audio>
+
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#cover" aria-label="返回首页">
+        <span class="brand-mark">明</span>
+        <span>WishNote</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#cover">首页</a>
+        <a href="#starry">仙女棒</a>
+        <a href="#delivery">便利贴</a>
+        <a href="#wall">心愿墙</a>
+        <a href="#memory">留念</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="cover" class="scene cover-scene">
+        <div class="scene-copy">
+          <p class="kicker">Home / Cover</p>
+          <h1>心愿便利贴</h1>
+          <p class="lead">
+            把你的心愿写成星光，贴近耳边，也贴近心里。
+          </p>
+          <p class="lyric-line">
+            一天一天贴近你的心，一点一滴我都能感应。
+          </p>
+        </div>
+
+        <div class="cover-stage" aria-label="音乐播放区">
+          <div class="album-halo">
+            <div class="album-card">
+              <span class="album-label">Wish Post-it</span>
+              <strong>Love Note</strong>
+              <small>Music Memory</small>
+            </div>
+            <button id="playButton" class="play-button" type="button" aria-label="播放音乐">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span id="playText">播放</span>
+            </button>
+          </div>
+          <div class="music-status">
+            <span id="currentTime">00:00</span>
+            <div class="progress-track" aria-hidden="true">
+              <span id="progressFill"></span>
+            </div>
+            <span id="durationTime">00:00</span>
+          </div>
+        </div>
+
+        <div class="floating-notes" aria-hidden="true">
+          <span>今天也喜欢你</span>
+          <span>流星雨见证</span>
+          <span>把心愿贴满夜空</span>
+        </div>
+      </section>
+
+      <section id="starry" class="scene starry-scene">
+        <div class="scene-copy narrow">
+          <p class="kicker">The Starry Night</p>
+          <h2>双子星空 · 点燃仙女棒</h2>
+          <p class="lead">
+            等不到双子座流星雨洒满天际，就先点燃这支仙女棒，照亮你眼睛里的星河。
+          </p>
+        </div>
+
+        <div class="constellation-wrap">
+          <div class="constellation left-star">
+            <svg class="star-path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <polyline points="24,18 54,28 42,56 70,70 15,76"></polyline>
+            </svg>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <button id="wandButton" class="wand-button" type="button" aria-label="点亮仙女棒" aria-pressed="false">
+            <span class="wand-border-flow" aria-hidden="true"></span>
+            <span class="wand-stick">
+              <span class="wand-spark"></span>
+            </span>
+          </button>
+          <div class="constellation right-star">
+            <svg class="star-path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <polyline points="24,18 54,28 42,56 70,70 15,76"></polyline>
+            </svg>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="delivery" class="scene delivery-scene">
+        <div class="scene-copy">
+          <p class="kicker">The Delivery of Hearts</p>
+          <h2>平凡的傻事 · 用心变经典</h2>
+          <p class="lead">
+            写下一句今天的心情，便利贴会替你把烦恼折成星星，送进温柔的夜风里。
+          </p>
+        </div>
+
+        <form id="deliveryForm" class="note-form">
+          <label for="deliveryInput">写一张便利贴</label>
+          <div class="input-row">
+            <span class="glow-field">
+              <input id="deliveryInput" maxlength="38" placeholder="例如：明天要继续闪闪发光" autocomplete="off" />
+            </span>
+            <button type="submit">送出</button>
+          </div>
+        </form>
+
+        <div id="deliveryNotes" class="delivery-notes" aria-live="polite"></div>
+      </section>
+
+      <section id="wall" class="scene wall-scene">
+        <div class="scene-copy narrow">
+          <p class="kicker">Wish Post-it Wall</p>
+          <h2>心愿无限 · 我们的宣言</h2>
+          <p class="lead">
+            把喜欢写成一张张便利贴，贴成无限符号，也贴成往后每一天的确定答案。
+          </p>
+        </div>
+
+        <form id="wallForm" class="wall-form">
+          <span class="glow-field">
+            <input id="wallInput" maxlength="30" placeholder="写下我的心愿" autocomplete="off" />
+          </span>
+          <button type="submit">贴上墙</button>
+        </form>
+        <div id="wishWall" class="wish-wall" aria-live="polite"></div>
+      </section>
+
+      <section id="memory" class="scene memory-scene">
+        <div class="scene-copy">
+          <p class="kicker">Forever Memory Box</p>
+          <h2>贴心收藏 · 留念未来</h2>
+          <p class="lead">
+            你和我的心愿便利贴，收进一本会发光的手账里，给以后永久怀念。
+          </p>
+        </div>
+
+        <div class="memory-layout">
+          <div class="memory-book">
+            <div class="book-page">
+              <span class="date-tag">Memory</span>
+              <p>收藏感动，给以后永久怀念。</p>
+              <div id="memoryList" class="memory-list"></div>
+            </div>
+          </div>
+          <div class="media-placeholder">
+            <video class="memory-video" src="烟花盛放/烟花盛放.mp4" autoplay muted loop playsinline controls preload="metadata" aria-label="烟花盛放视频"></video>
+          </div>
+        </div>
+
+        <button id="replayButton" class="replay-button" type="button">重新体验</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
