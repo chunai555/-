@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Love Love</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23b82d48' d='M16 28S3 20 3 10a7 7 0 0 1 12-5 7 7 0 0 1 12 5c0 10-11 18-11 18Z'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+      <a class="brand" href="#prologue" aria-label="Love Love 首页">
+        <span class="brand-mark"></span>
+        <span>Love Love</span>
+      </a>
+      <nav class="chapter-nav" aria-label="章节导航">
+        <a href="#prologue">序曲</a>
+        <a href="#saint">相遇</a>
+        <a href="#echo">回响</a>
+        <a href="#promise">笃定</a>
+        <a href="#garden">花草</a>
+        <a href="#starlight">终点</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="screen hero" id="prologue" data-tone="soft">
+        <video class="hero-video" src="2f727f7b4cd044f9237fd257b95b888d.mp4" autoplay muted loop playsinline></video>
+        <div class="screen-shade"></div>
+        <div class="prologue-composition" aria-hidden="true">
+          <div class="butterfly-aura"></div>
+          <div class="butterfly-shadow"></div>
+          <div class="gold-dust-stream">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="light-corridor">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="opening-petal" aria-hidden="true"></div>
+        <div class="octave-rain" aria-hidden="true">
+          <span>♪</span><span>♬</span><span>♫</span><span>♪</span><span>♩</span><span>♬</span>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">庄周梦蝶 · 爱情的序曲</p>
+          <h1>Love Love</h1>
+          <p class="lead">当音乐醒来，蝴蝶从一束光里穿过，星尘和心跳一起落在屏幕中央。</p>
+          <div class="hero-actions">
+            <button class="primary-action" id="heroPlay" type="button">
+              <span class="play-glyph"></span>
+              <span>播放这首歌</span>
+            </button>
+            <a class="ghost-action" href="#saint">进入相遇</a>
+          </div>
+        </div>
+        <div class="butterfly-secret">
+          <button class="secret-butterfly" id="butterflySecret" type="button" aria-label="点击蝴蝶，解开蝴蝶的秘密">
+            <span class="antenna antenna-left"></span>
+            <span class="antenna antenna-right"></span>
+            <span class="wing wing-left">
+              <span class="wing-scroll scroll-a"></span>
+              <span class="wing-scroll scroll-b"></span>
+              <span class="wing-scroll scroll-c"></span>
+              <span class="wing-glitter"></span>
+            </span>
+            <span class="wing wing-right">
+              <span class="wing-scroll scroll-a"></span>
+              <span class="wing-scroll scroll-b"></span>
+              <span class="wing-scroll scroll-c"></span>
+              <span class="wing-glitter"></span>
+            </span>
+            <span class="butterfly-body"></span>
+          </button>
+          <p class="secret-line">点击蝴蝶，解开蝴蝶的秘密。</p>
+          <p class="secret-poem">Love Love 在光里醒来，下一次心跳就是相遇。</p>
+        </div>
+        <div class="light-burst" id="lightBurst" aria-hidden="true"></div>
+        <div class="golden-trail" id="goldenTrail" aria-hidden="true"></div>
+        <div class="down-glow" aria-hidden="true"></div>
+        <div class="butterfly-field" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <section class="screen split glass" id="saint" data-tone="glass">
+        <div class="scene-art" style="--image: url('assets/generated/dream-glass.png')"></div>
+        <div class="glass-splitter" aria-hidden="true">
+          <span class="glass-wing glass-wing-left"></span>
+          <span class="glass-wing glass-wing-right"></span>
+          <div class="encounter-map">
+            <span class="encounter-curve curve-left"></span>
+            <span class="encounter-curve curve-right"></span>
+            <span class="encounter-thread"></span>
+            <span class="encounter-node node-left"></span>
+            <span class="encounter-node node-center"></span>
+            <span class="encounter-node node-right"></span>
+          </div>
+          <div class="glass-distance-grid">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="debate-stage" id="debateStage">
+          <div class="debate-heading">
+            <p class="eyebrow">第二屏</p>
+            <h2>圣人辩爱 · 天时地利的相遇</h2>
+            <p>把鼠标悬停在左岸或右岸，音乐会随视角产生距离与方位变化；点击面板可锁定这段辩爱。</p>
+          </div>
+
+          <button class="philosopher-card left active" type="button" data-mood="distance" aria-pressed="true">
+            <span class="saint-title">孔子说爱情</span>
+            <span class="saint-line">距离产生问题</span>
+            <span class="silk-thread" aria-hidden="true"></span>
+            <span class="micro-heart heart-a" aria-hidden="true"></span>
+            <span class="micro-heart heart-b" aria-hidden="true"></span>
+            <span class="card-hint">悬停左侧：声音由远及近</span>
+          </button>
+
+          <div class="lyric-cross" aria-live="polite">
+            <span class="lyric-orbit"></span>
+            <p id="debateLyric">“孔子说爱情，距离产生问题。”</p>
+            <div class="debate-switches">
+              <button type="button" class="debate-chip active" data-mood="distance">距离</button>
+              <button type="button" class="debate-chip" data-mood="timing">天时地利</button>
+              <button type="button" class="debate-chip" data-mood="center">相遇</button>
+            </div>
+          </div>
+
+          <button class="philosopher-card right" type="button" data-mood="timing" aria-pressed="false">
+            <span class="saint-title">孟子说爱情</span>
+            <span class="saint-line">讲究天时地利</span>
+            <span class="astrolabe" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+            <span class="sun-moon" aria-hidden="true"></span>
+            <span class="card-hint">悬停右侧：旋转成环绕声场</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen crimson" id="echo" data-tone="hot">
+        <div class="scene-art full" style="--image: url('assets/generated/rose-echo.png')"></div>
+        <div class="echo-composition" aria-hidden="true">
+          <div class="love-beat-grid">
+            <span>Love</span><span>Love</span><span>Love</span><span>Love</span>
+            <span>Love</span><span>Love</span><span>Love</span><span>Love</span>
+          </div>
+          <div class="echo-pulse-field">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="lyric-ribbon-wall">
+            <span>Love love love love</span>
+            <span>Love love love love</span>
+            <span>Love love love love</span>
+          </div>
+          <span class="rose-halo halo-a"></span>
+          <span class="rose-halo halo-b"></span>
+          <span class="rose-halo halo-c"></span>
+        </div>
+        <div class="echo-stage">
+          <div class="echo-copy">
+            <p class="eyebrow">第三屏</p>
+            <h2>真爱狂欢 · Love Love 的回响</h2>
+            <p>高频的 Love Love 像心跳一样重拍。输入告白，文字会被中央爱心播撒器点亮，化成爱情药方和玫瑰光雾。</p>
+          </div>
+
+          <div class="confession-lab">
+            <div class="potion-bottle" aria-hidden="true">
+              <span class="bottle-neck"></span>
+              <span class="bottle-glow"></span>
+              <span class="vapor vapor-a"></span>
+              <span class="vapor vapor-b"></span>
+              <span class="vapor vapor-c"></span>
+              <div class="potion-drops" id="potionDrops"></div>
+            </div>
+
+            <button class="heart-broadcaster" id="heartBroadcaster" type="button" aria-label="点亮告白爱心">
+              <span class="broadcast-ring ring-a"></span>
+              <span class="broadcast-ring ring-b"></span>
+              <span class="broadcast-ring ring-c"></span>
+              <span class="heart-core" id="heartCore"></span>
+              <span class="live-confession" id="liveConfessionText">Love Love</span>
+            </button>
+
+            <div class="confession-panel">
+              <div class="love-frequency">
+                <span>Love</span><span>love</span><span>love</span><span>love</span>
+              </div>
+              <form class="love-form" id="loveForm">
+                <input id="loveInput" type="text" maxlength="18" placeholder="实时打下：我爱你" autocomplete="off" />
+                <button type="submit">注入告白</button>
+              </form>
+              <p class="confession-stat">已收到 <strong id="confessionCount">4</strong> 份恋人留言</p>
+            </div>
+          </div>
+
+          <div class="love-notes" id="loveNotes" aria-live="polite"></div>
+          <div class="love-symbol-rain" aria-hidden="true">
+            <span>Love</span><span>Love</span><span>Love</span><span>Love</span><span>Love</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen promise" id="promise" data-tone="dawn">
+        <div class="scene-art" style="--image: url('assets/generated/dawn-promise.png')"></div>
+        <div class="promise-composition" aria-hidden="true">
+          <div class="dream-cloud-sea">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <span class="dream-bubble bubble-a"></span>
+          <span class="dream-bubble bubble-b"></span>
+          <span class="dream-bubble bubble-c"></span>
+          <span class="courage-horizon"></span>
+          <span class="oath-path"></span>
+          <div class="oath-rings">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="ember-lift">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="courage-sky" aria-hidden="true">
+          <span class="cloud cloud-a"></span>
+          <span class="cloud cloud-b"></span>
+          <span class="cloud cloud-c"></span>
+          <span class="fire fire-a"></span>
+          <span class="fire fire-b"></span>
+          <span class="fire fire-c"></span>
+        </div>
+        <div class="promise-stage" id="promiseStage" style="--courage: 38">
+          <div class="promise-copy">
+            <p class="eyebrow">第四屏</p>
+            <h2>梦境与勇气 · 执子之手的笃定</h2>
+            <p>拖动勇气测试，让梦境里的迷雾变成坚定的光。越靠近右侧，火焰越明亮，牵手剪影也会越清晰。</p>
+          </div>
+
+          <div class="courage-visual" aria-hidden="true">
+            <div class="moon-sword">
+              <span class="blade"></span>
+              <span class="handle"></span>
+              <span class="light-wave"></span>
+            </div>
+            <div class="dragon-flame">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="couple-silhouette">
+              <span class="person person-a"></span>
+              <span class="person person-b"></span>
+              <span class="joined-hands"></span>
+            </div>
+          </div>
+
+          <div class="courage-panel">
+            <div class="courage-meter">
+              <span>梦境</span>
+              <strong id="courageValue">38%</strong>
+              <span>勇气</span>
+            </div>
+            <input id="courageRange" type="range" min="0" max="100" value="38" aria-label="勇气测试滑块" />
+            <p id="courageText">青龙偃月刀正在化成温柔的光波。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen garden" id="garden" data-tone="garden">
+        <div class="scene-art full" style="--image: url('assets/generated/flower-poem.png')"></div>
+        <div class="poem-garden" id="poemGarden">
+          <div class="garden-copy">
+            <p class="eyebrow">第五屏</p>
+            <h2>诗经花草 · 胜过一切计谋</h2>
+            <p>点击任意一朵花草，它会被摘取成一句诗意情话。三十六计的兵法散去，最后只留下春天里的表白卡片。</p>
+          </div>
+
+          <div class="flower-field" aria-label="植物情书生成器">
+            <button class="flower-item redbean" type="button" data-flower="redbean">
+              <span class="stem"></span><span class="bloom"></span><span class="leaf"></span>
+              <strong>红豆</strong>
+            </button>
+            <button class="flower-item reed" type="button" data-flower="reed">
+              <span class="stem"></span><span class="bloom"></span><span class="leaf"></span>
+              <strong>蒹葭</strong>
+            </button>
+            <button class="flower-item peach" type="button" data-flower="peach">
+              <span class="stem"></span><span class="bloom"></span><span class="leaf"></span>
+              <strong>桃夭</strong>
+            </button>
+            <button class="flower-item orchid" type="button" data-flower="orchid">
+              <span class="stem"></span><span class="bloom"></span><span class="leaf"></span>
+              <strong>兰草</strong>
+            </button>
+          </div>
+
+          <div class="love-letter-card">
+            <p class="letter-label">植物情书</p>
+            <p id="flowerPoem">点一朵花，让它替你写下“我爱你”。</p>
+            <div class="picked-row" id="pickedRow" aria-label="已摘取的花草"></div>
+            <button id="composeLetter" type="button">生成表白卡</button>
+          </div>
+
+          <div class="floating-letter" id="floatingLetter" aria-live="polite">
+            <span>Love Letter</span>
+            <p>春天替你把爱写好。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen starlight" id="starlight" data-tone="night">
+        <div class="scene-art full" style="--image: url('assets/generated/starlit-ending.png')"></div>
+        <div class="cosmic-map" aria-hidden="true">
+          <span class="earth-arc"></span>
+          <span class="sky-river"></span>
+          <span class="orbit-line orbit-a"></span>
+          <span class="orbit-line orbit-b"></span>
+          <span class="orbit-line orbit-c"></span>
+        </div>
+
+        <div class="finale-stage" id="finaleStage">
+          <div class="ending-copy">
+            <p class="eyebrow">第六屏</p>
+            <h2>时空交错 · 终点是你</h2>
+            <p>输入你们相遇的日期，星空会生成一张专属星图。天文与地理在此重合，终章的 Love Love 会指向同一个名字。</p>
+          </div>
+
+          <div class="star-chart" id="starChart" aria-label="专属星图">
+            <svg class="constellation-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <polyline id="constellationPath" points="18,66 32,38 48,58 64,28 82,50" />
+            </svg>
+            <button class="star-node vega" type="button" data-star="织女星">
+              <span></span><strong>织女</strong>
+            </button>
+            <button class="star-node altair" type="button" data-star="牛郎星">
+              <span></span><strong>牛郎</strong>
+            </button>
+            <div class="butterfly-dance" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <div class="generated-stars" id="generatedStars" aria-hidden="true"></div>
+            <p class="chorus-line" id="chorusLine">Love love love...</p>
+          </div>
+
+          <div class="date-orbit">
+            <label for="dateInput">相遇日期</label>
+            <input id="dateInput" type="date" />
+            <span id="constellationText">选择一颗属于你们的星</span>
+            <button id="singFinale" type="button">点亮终章</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="player" aria-label="音乐播放器">
+      <audio id="audio" src="love love.mp3" preload="metadata"></audio>
+      <button class="player-btn" id="playBtn" type="button" aria-label="播放或暂停">
+        <span class="play-glyph"></span>
+      </button>
+      <div class="disc" aria-hidden="true"></div>
+      <div class="track-meta">
+        <strong>Love Love</strong>
+        <span id="timeText">00:00 / 00:00</span>
+      </div>
+      <input class="progress" id="progress" type="range" min="0" max="1000" value="0" aria-label="播放进度" />
+      <button class="player-btn small" id="muteBtn" type="button" aria-label="静音">
+        <span class="sound-glyph"></span>
+      </button>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
