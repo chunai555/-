@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>痴情的人总是太傻 - 情话音乐网站</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-layer" id="cursor-layer" aria-hidden="true"></div>
+
+  <audio id="theme-audio" src="assets/qinghua.mp3" preload="metadata"></audio>
+
+  <nav class="side-progress" aria-label="章节导航">
+    <a href="#scene-1" class="progress-dot is-active" aria-label="序章"></a>
+    <a href="#scene-2" class="progress-dot" aria-label="沦陷"></a>
+    <a href="#scene-3" class="progress-dot" aria-label="沉溺"></a>
+    <a href="#scene-4" class="progress-dot" aria-label="挣扎"></a>
+    <a href="#scene-5" class="progress-dot" aria-label="终章"></a>
+  </nav>
+
+  <main>
+    <section class="scene intro is-active" id="scene-1" data-title="序章 - 替身情话">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="intro-aurora" aria-hidden="true"></div>
+      <div class="intro-grid" aria-hidden="true"></div>
+      <div class="scene-inner intro-inner">
+        <p class="scene-kicker">第一幕：【序章·替身情话】—— 执念的初见</p>
+        <h1 class="glitch-title" data-text="痴情的人总是太傻">痴情的人总是太傻</h1>
+        <p class="subtitle">冲花了最美的年华</p>
+        <button class="start-button intro-start flow-border" id="start-button" type="button"><span class="button-spark">✦</span> 开启回忆</button>
+        <div class="intro-stage flow-border">
+          <article class="lyric-archive purple-flow-border">
+            <span class="archive-tag">对应歌词</span>
+            <p>“我不是她，没有美丽的长发 / 不要害怕，潇洒掩饰了虚假”</p>
+          </article>
+          <div class="crt-frame purple-flow-border" aria-label="黑白照片留声机视频占位">
+            <div class="crt-screen purple-flow-border">
+              <div class="old-photo"><div class="photo-placeholder has-image"><img src="assets/memory-520.png" alt="来了"></div></div>
+              <div class="record-player" aria-hidden="true"><span class="record-disc"></span><span class="record-impact"></span><span class="record-arm"></span></div>
+            </div>
+          </div>
+        </div>
+        <p class="type-line" id="type-line">屏幕中央是一尊精致的黑色复古胶片留声机，点击后，唱针落下，黑胶唱片引爆声响。</p>
+        <div class="interaction-strip" aria-label="核心交互"><button class="strip-cue scene-music-cue purple-flow-border" type="button" data-cue-ratio="0">点击播放 · 情话</button><button class="strip-action purple-flow-border" id="lyric-type-button" type="button">歌词打字</button><span class="purple-flow-border">泪珠拖尾</span><span class="purple-flow-border">自动滚动</span></div>
+      </div>
+    </section>
+
+    <section class="scene mirror-scene" id="scene-2" data-title="沦陷 - 假面微笑">
+      <div class="rose-petals" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="black-rose-fall" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="scene-inner mirror-inner">
+        <div class="mirror-copy">
+          <p class="scene-kicker">第二幕：【沦陷·假面微笑】—— 妆容下的卑微</p>
+          <h2>假面微笑</h2>
+          <p class="mirror-lead flow-border purple-flow-border">屏幕左侧是一面半透明复古梳妆镜，镜面有水雾划落的痕迹。右侧的歌词跟着音乐节奏浮现，像玫瑰花瓣一层层落在旧网页里。</p>
+          <button class="mirror-lyric glitch-soft" id="mirror-lyric" type="button" data-text="我的微笑不像她，她的眼角我也会画。">我的微笑不像她，她的眼角我也会画。</button>
+          <p class="mirror-hint">点击歌词，镜子会写下一句藏起来的情话。</p>
+          <button class="scene-music-cue flow-border purple-flow-border" type="button" data-cue-ratio="0.2">播放本幕 · 情话</button>
+        </div>
+        <div class="vanity-stage purple-flow-border" aria-label="复古梳妆镜互动舞台">
+          <div class="mirror-glass purple-flow-border">
+            <span class="mirror-border-flow" aria-hidden="true"></span>
+            <span class="water-mark mark-a"></span><span class="water-mark mark-b"></span><span class="water-mark mark-c"></span>
+            <p class="handwriting" id="mirror-handwriting">我学着她眨眼，学着她微笑，却学不会被你拥抱。</p>
+          </div>
+          <div class="ink-lyric-panel purple-flow-border" id="ink-lyric-panel" aria-live="polite">
+            <p class="ink-line is-visible">我的微笑不像她，她的眼角我也会画。</p>
+            <p class="ink-line">每当你又想念着她，总会偷偷说情话。</p>
+            <p class="ink-line">每当我又无法自拔，痴情的人总是太傻。</p>
+            <p class="ink-line">一滴墨落下，晕开我藏不住的回答。</p>
+            <p class="ink-line">我把晚风折成信封，只敢寄给梦里的你。</p>
+            <p class="ink-line">你的名字一出现，旧日记就开始下雨。</p>
+            <p class="ink-line">我不是月亮，却在每个夜里替你发光。</p>
+            <p class="ink-line">如果爱会褪色，我就一遍遍替回忆上妆。</p>
+            <p class="ink-line">你随口一句晚安，我偷偷收藏了好多年。</p>
+            <p class="ink-line">我把想念写成黑玫瑰，落在你看不见的窗前。</p>
+            <p class="ink-line">人群那么吵，我还是只听见你没说出口的话。</p>
+            <p class="ink-line">若我终究不是她，也想做你心口一场雪。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene rain-scene" id="scene-3" data-title="沉溺 - 痴情人太傻">
+      <div class="rain" aria-hidden="true"></div>
+      <div class="bottle-bubbles" id="bottle-bubbles" aria-hidden="true"></div>
+      <div class="scene-inner sink-inner">
+        <div class="sink-copy">
+          <p class="scene-kicker">第三幕：【沉溺·痴情人太傻】—— 无法自拔的独白</p>
+          <h2>痴情人太傻</h2>
+          <div class="diary-card sink-paper purple-flow-border">
+            <span class="archive-tag">对应歌词</span>
+            <p>“每当你又想念着她，总会偷偷说情话 / 每当我又无法自拔，痴情的人总是太傻”</p>
+          </div>
+          <p class="sink-lead">极具非主流日记感的设计。淡黄信纸、泪痕、边缘带虚拟低纸，音乐进入副歌时，整张信纸像被雨水泡软。</p>
+          <form class="confession-form bottle-form" id="confession-form">
+            <label for="confession-input">把你的单微情话塞进漂流瓶</label>
+            <div class="input-row purple-flow-border"><input class="purple-flow-border" id="confession-input" type="text" maxlength="28" placeholder="例如：我替月亮偷偷喜欢你"><button type="submit">埋葬回忆</button></div>
+          </form>
+          <button class="scene-music-cue flow-border purple-flow-border" type="button" data-cue-ratio="0.4">播放本幕 · 情话</button>
+        </div>
+        <div class="bottle-stage flow-border purple-flow-border" aria-label="漂流瓶情话互动区">
+          <button class="drift-bottle" id="drift-bottle" type="button" aria-label="打开漂流瓶"><span class="bottle-neck"></span><span class="bottle-body"></span><span class="bottle-letter">情话</span></button>
+          <div class="bottle-message purple-flow-border" id="bottle-message" aria-live="polite">点一下漂流瓶，看看别人藏起来的单微情话。</div>
+          <div class="water-ripple" aria-hidden="true"></div>
+        </div>
+        <div class="confession-wall" id="confession-wall" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="scene embrace-scene" id="scene-4" data-title="挣扎 - 窒息的拥抱">
+      <div class="star-web" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="broken-lyrics" aria-hidden="true"><span>等当你又想念着他</span><span>不要把我抱紧好吗</span><span>苦苦在微笑中挣扎</span><span>错位的温柔</span></div>
+      <div class="scene-inner embrace-inner">
+        <div class="embrace-copy">
+          <p class="scene-kicker">第四幕：【挣扎·窒息的拥抱】—— 错位的温柔</p>
+          <h2>窒息的拥抱</h2>
+          <p class="embrace-lead">强烈的视觉冲击幕。深邃夜墓蓝和霓虹粉反差交织，中心是无数歌词线条交织而成的拥抱残影，靠近、破碎、又分开。</p>
+          <button class="scene-music-cue flow-border purple-flow-border" type="button" data-cue-ratio="0.6">播放本幕 · 情话</button>
+        </div>
+        <div class="embrace-stage flow-border purple-flow-border" aria-label="错位拥抱互动舞台">
+          <div class="silhouette-stage flow-border purple-flow-border" aria-hidden="true">
+            <div class="lyric-thread thread-a">等当你又想念着他</div><div class="lyric-thread thread-b">不要把我抱紧好吗</div><div class="lyric-thread thread-c">苦苦在微笑中挣扎</div>
+            <div class="silhouette left"></div><div class="silhouette right"></div>
+          </div>
+          <div class="fracture-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+        <div class="swipe-card embrace-card flow-border purple-flow-border" id="swipe-card">
+          <p id="swipe-text">当你又想念着他，不要把我抱紧好吗。</p>
+          <span>左右轻扫，或点击箭头切换错位情话</span>
+          <div class="embrace-controls" aria-label="切换错位情话"><button type="button" class="embrace-prev" id="embrace-prev" aria-label="上一句">‹</button><button type="button" class="embrace-next" id="embrace-next" aria-label="下一句">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene finale-scene" id="scene-5" data-title="终章 - 风中花谢">
+      <div class="petals" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="scene-inner finale-inner">
+        <div class="finale-copy">
+          <p class="scene-kicker">第五幕：【终章·风中花谢】—— 满酒的散场</p>
+          <h2>风中花谢</h2>
+          <p class="finale-lead">画面回归宁静。浅色调的漫天飞花从左向右缓缓飘过，带走前面的宣泄。旧 CD 和磁带控制台留在屏幕中央，像一封终于寄出的告别。</p>
+          <div class="archive-note final-note purple-flow-border"><span class="archive-tag">对应歌词</span><p>“风中的花，抚慰着我的脸颊 / 不要害怕，满酒掩饰了虚假”</p></div>
+          <button class="scene-music-cue flow-border purple-flow-border" type="button" data-cue-ratio="0.8">播放本幕 · 情话</button>
+        </div>
+        <div class="farewell-console purple-flow-border" aria-label="终章播放控制台">
+          <div class="cd-area flow-border purple-flow-border">
+            <div class="cd-disc" aria-hidden="true"></div>
+            <div class="cassette" aria-hidden="true"><span class="cassette-window"></span><span class="cassette-reel reel-left"></span><span class="cassette-reel reel-right"></span><span class="cassette-label">情话 / 最后一遍</span></div>
+          </div>
+          <div class="memory-card purple-flow-border" id="memory-card" aria-live="polite"><span>未生成</span><p>点击“生成回忆卡片”，把最戳人的一句歌词带到散场。</p></div>
+        </div>
+        <div class="ending-actions"><button type="button" id="replay-button">再听一遍</button><button type="button" id="memory-button">生成回忆卡片</button><button type="button" id="loop-button" aria-pressed="false">沉溺模式</button><a href="#scene-1">回到开头</a></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="mini-player purple-flow-border" id="mini-player" aria-label="音乐播放器">
+    <button class="play-toggle" id="play-toggle" type="button" aria-label="播放或暂停">M</button>
+    <div class="track-meta"><strong id="current-scene">情话</strong><div class="progress-track" aria-hidden="true"><span id="audio-progress"></span></div></div>
+    <span class="time" id="audio-time">00:00</span>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
