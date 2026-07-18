@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="《后会无期》青春致敬音乐站：QQ、农场、飞车、炫舞与一场回忆谢幕。"
+    />
+    <title>后会无期 · 致敬青春</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      (function () {
+        const isFile = location.protocol === "file:";
+        const script = document.createElement("script");
+        if (isFile) {
+          script.src = "./app.js";
+        } else {
+          script.type = "module";
+          script.src = "/src/main.ts";
+        }
+        document.head.appendChild(script);
+        if (isFile) {
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href = "./app.css";
+          document.head.appendChild(link);
+        }
+      })();
+    </script>
+  </body>
+</html>
