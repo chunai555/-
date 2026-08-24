@@ -171,7 +171,6 @@ a {
 }
 
 .scene-bg,
-.rain-layer,
 .hand-constellation,
 .clock-face,
 .moon-road,
@@ -323,9 +322,7 @@ blockquote.no-left-border {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(120deg, transparent 0 36%, rgba(255, 255, 255, 0.3) 44%, transparent 54%),
-    radial-gradient(circle at 22% 20%, rgba(255, 255, 255, 0.34), transparent 20%),
-    repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0 1px, transparent 1px 16px);
+    radial-gradient(circle at 22% 20%, rgba(255, 255, 255, 0.34), transparent 20%);
   opacity: 0.78;
   animation: shimmer 8s ease-in-out infinite;
 }
@@ -360,8 +357,7 @@ blockquote.no-left-border {
 .video-tile::before {
   background:
     radial-gradient(circle at 50% 50%, rgba(255,255,255,0.82) 0 0.36rem, transparent 0.38rem),
-    conic-gradient(from 90deg, rgba(255, 255, 255, 0.34), rgba(255, 112, 166, 0.24), rgba(248, 199, 122, 0.34), rgba(255, 255, 255, 0.34)),
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.14) 0 0.16rem, transparent 0.16rem 0.9rem);
+    conic-gradient(from 90deg, rgba(255, 255, 255, 0.34), rgba(255, 112, 166, 0.24), rgba(248, 199, 122, 0.34), rgba(255, 255, 255, 0.34));
   animation: slowSpin 12s linear infinite;
 }
 
@@ -423,10 +419,10 @@ blockquote.no-left-border {
 .placeholder-memory-01 { background: linear-gradient(145deg, rgba(55,28,56,0.2), rgba(179,132,122,0.16)), url("错失视频/7月9日-封面.jpg") center / cover; }
 .placeholder-memory-02 { background: linear-gradient(145deg, rgba(25,13,24,0.2), rgba(248,199,122,0.16)), url("离开你了/离开你了-封面.jpg") center / cover; }
 .placeholder-memory-03 { background: linear-gradient(145deg, rgba(36,32,86,0.2), rgba(255,112,166,0.16)), url("烟花盛放/烟花盛放-封面.jpg") center / cover; }
-.placeholder-ocean-01 { background: linear-gradient(145deg, rgba(8,33,57,0.2), rgba(145,242,255,0.16)), url("大海.png") center / cover; }
-.placeholder-smile-01 { background: linear-gradient(145deg, rgba(81,39,82,0.2), rgba(255,112,166,0.16)), url("来了.png") center / cover; }
-.placeholder-future-01 { background: linear-gradient(145deg, rgba(22,28,66,0.2), rgba(105,140,232,0.16)), url("微笑图片.png") center / cover; }
-.placeholder-sea-video { background: linear-gradient(145deg, rgba(8,19,31,0.2), rgba(145,242,255,0.16)), url("甜蜜视频/甜蜜视频-封面.jpg") center / cover; }
+.placeholder-ocean-01 { background: linear-gradient(145deg, rgba(8,33,57,0.2), rgba(145,242,255,0.16)), url("男主1.png") center / cover; }
+.placeholder-smile-01 { background: linear-gradient(145deg, rgba(81,39,82,0.2), rgba(255,112,166,0.16)), url("女主.png") center / cover; }
+.placeholder-future-01 { background: linear-gradient(145deg, rgba(22,28,66,0.2), rgba(105,140,232,0.16)), url("男主2.png") center / cover; }
+.placeholder-sea-video { background: linear-gradient(145deg, rgba(8,19,31,0.2), rgba(145,242,255,0.16)), url("女主2.png") center / cover; }
 
 .edge-flow-host {
   position: relative;
@@ -462,13 +458,6 @@ blockquote.no-left-border {
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.08),
     0 0 0.8rem rgba(179, 140, 255, 0.26);
-}
-
-.rain-layer {
-  background-image: repeating-linear-gradient(105deg, rgba(255,255,255,0.16) 0 1px, transparent 1px 10px);
-  background-size: 7rem 7rem;
-  mask-image: linear-gradient(90deg, transparent, black 18%, black 82%, transparent);
-  animation: rain 0.85s linear infinite;
 }
 
 .hand-constellation span,
@@ -665,8 +654,8 @@ blockquote.no-left-border {
   color: rgba(255, 255, 255, 0.88);
 }
 
-.winter { background: linear-gradient(160deg, #e0aaff, #465778 48%, #11182f); }
-.spring { background: linear-gradient(160deg, #ffb5a7, #ff70a6 48%, #577d57); }
+.winter { background: linear-gradient(160deg, rgba(224,170,255,0.16), rgba(70,87,120,0.2) 48%, rgba(17,24,47,0.24)), url("变化1.png") center / cover; }
+.spring { background: linear-gradient(160deg, rgba(255,181,167,0.16), rgba(255,112,166,0.2) 48%, rgba(87,125,87,0.24)), url("变化2.jpg") center / cover; }
 
 .finale {
   grid-template-columns: 1fr;
@@ -675,7 +664,6 @@ blockquote.no-left-border {
 
 .river-stars {
   background:
-    linear-gradient(115deg, transparent 12%, rgba(255,255,255,0.15) 30%, transparent 48%),
     repeating-radial-gradient(circle at 70% 50%, rgba(255,255,255,0.22) 0 1px, transparent 1px 16px);
   animation: riverMove 12s linear infinite;
 }
@@ -950,10 +938,6 @@ input[type="range"] {
 
 @keyframes slowSpin {
   to { transform: rotate(360deg); }
-}
-
-@keyframes rain {
-  to { background-position: 0 7rem; }
 }
 
 @keyframes pulseRing {
